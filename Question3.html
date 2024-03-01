@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set the string according to their length</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        const str = "this is javascript code"
+        const arrOfstr = str.split(/\s+/g)
+        const filterOfarr = arrOfstr.filter((ele) => ele.length > 1)
+        const sortOfarr = filterOfarr.sort((a, b) => a.length - b.length)
+        console.log(sortOfarr)
+        // filter over here 
+        // Array.from start here
+        const arrOffunc = function () {
+            return Array.from(arguments).join('')
+        }
+        const result = arrOffunc('s', 'h', 'e', 'r')
+        console.log(result)
+    </script>
+</body>
+
+</html>

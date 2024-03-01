@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color:#313131;">
+    <div style="color:white;">
+        <h1>Question 10</h1>
+        <p>Given an integer array arr and a mapping function fn, return a new array with a transformation applied to
+            each element.
+
+            The returned array should be created such that returnedArray[i] = fn(arr[i], i).
+
+            Please solve it without the built-in Array.map method.</p>
+    </div>
+    <script>
+        const arr = [1, 2, 3]
+        const fn = (value, index) => {
+            return value + index;
+        }
+        const map = (arr, fn) => {
+            let transformationOfarr = []
+            for (let i = 0; i < arr.length; i++) {
+                transformationOfarr.push(fn(arr[i], i))
+            }
+
+        };
+        map(arr, fn)
+    </script>
+</body>
+
+</html>

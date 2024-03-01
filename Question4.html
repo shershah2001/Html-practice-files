@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>real life example of try and catch and throw method </title>
+</head>
+
+<body style="background-color: #313131;">
+
+    <script>
+        const expect = (val) => {
+            const value = val
+            const toBe = (otherVal) => {
+                if (otherVal === val) {
+                  return  false
+                } else {
+                    throw "Not Equal"
+                }
+            }
+
+            const notToBe = (otherVal) => {
+                if (otherVal !== val) {
+                    return  true
+                } else {
+                    throw "Equal"
+                }
+            }
+            return {
+                toBe,
+                notToBe
+            }
+        }
+        try {
+            expect(5).toBe(5),
+                expect(5).notToBe(10)
+        } catch (err) {
+            console.log(err)
+        }
+    </script>
+</body>
+
+</html>

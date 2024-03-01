@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maximum repeating word found</title>
+</head>
+
+<body>
+    <script>
+
+
+
+        const str = "this is javascript code and you to find max char";
+        // Step 1: Split the string into an array of characters, ignoring spaces
+        const arrOfChars = str.replace(/\s+/g, '').split('');
+        // Step 2: Count the occurrences of each character
+        const charCounts = arrOfChars.reduce((counts, char) => {
+            counts[char] = (counts[char] || 0)+1;
+            return counts;
+        }, {});
+
+        // Step 3: Find the character with the maximum count
+        let maxChar = '';
+        let maxCount = 0;
+        for (const char in charCounts) {
+            if (charCounts[char] > maxCount) {
+                maxCount = charCounts[char];
+                maxChar = char;
+            }
+        }
+     
+   
+    </script>
+</body>
+
+</html>

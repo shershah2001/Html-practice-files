@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [["a", "apple"], ["b", "banana"], ["c", "orange"], ["d", "laptop"], ["e", "computer"]]
+        const arrOfmap = new Map(arr)
+        //console.log(arrOfmap)
+        const arrObj = { a: "apple", b: "banana", c: "cat", d: "dog" };
+        const arrOfobj = new Map(Object.entries(arr));
+        console.log("arrOfobj",arrOfobj)
+
+        const num = 123;
+        console.log("string =>",typeof num.toString())
+    </script>
+</body>
+
+</html>

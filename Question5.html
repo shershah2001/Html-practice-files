@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const createCounter = (init) => {
+            let currentCount = init
+
+            const increment = () => {
+                 currentCount += 1;
+                return currentCount
+                
+            };
+            const reset = () => {
+                 currentCount = init
+                 return currentCount;
+            };
+            const decrement = () => {
+                 currentCount -= 1;
+                 return currentCount;
+            };
+
+           
+            return {
+
+                increment,
+                reset,
+                decrement
+            }
+
+        }
+        
+        createCounter(5).increment()
+        createCounter(5).reset()
+        createCounter(5).decrement()
+
+    </script>
+</body>
+
+</html>

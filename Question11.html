@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to filter an array without using array.filter method </title>
+</head>
+
+<body style="background-color: #313131;">
+    <h1>Question 11</h1>
+    <p> Given an integer array arr and a filtering function fn, return a filtered array filteredArr.
+
+        The fn function takes one or two arguments:
+
+        arr[i] - number from the arr
+        i - index of arr[i]
+
+        filteredArr should only contain the elements from the arr for which the expression fn(arr[i], i) evaluates to a
+        truthy value. A truthy value is a value where Boolean(value) returns true.
+
+        Please solve it without the built-in Array.filter method.</p>
+    <script>
+        const arr = [0, 10, 20, 30]
+        const fn = (value) => {
+            return value > 10
+        }
+        const filter = (arr, fn) => {
+            let filterArray = []
+            for (let i = 0; i < arr.length; i++) {
+                const result = fn(arr[i]);
+                if (result) {
+                    filterArray.push(arr[i])
+                }
+            }
+            console.log( filterArray)
+
+        }
+        filter(arr, fn)
+    </script>
+</body>
+
+</html>

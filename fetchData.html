@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: flex; justify-content:center;">
+        <form action="" method="post" style="display: flex;flex-direction:column; width:250px;">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="name">Job</label>
+            <input type="text" name="job" id="job">
+            <button type="submit" style="width:100px;margin-top:1rem;" onclick="submitHandler(event)">
+                Submit
+            </button>
+        </form>
+        <p id="errorPara"></p>
+    </div>
+    <script src="fetchData.js"></script>
+</body>
+
+</html>

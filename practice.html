@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to use split method</title>
+</head>
+
+<body>
+    <p id="demo">Hello World</p>
+    <script>
+        const str = "this is javascript code"
+        const arr = ["apple", "banana", "mango"];
+
+        const arrOfstr = str.split(' ');
+        const arrOfreverse = arrOfstr.map((ele) => ele.split("").reverse().join('')).join(' ')
+        document.write(arrOfreverse)
+    </script>
+</body>
+
+</html>

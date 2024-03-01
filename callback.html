@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const func1 = (sum) => {
+            console.log(sum)
+        }
+        const func2 = (sum) => {
+            console.log(sum)
+        }
+        const person = (num1, num2, callback) => {
+            let sum = num1 + num2;
+            callback(sum)
+        }
+        person(20, 20, func1);
+        person(40, 40, func2);
+
+        const prison = (num1) => {
+            let sum = num1;
+            return sum
+        }
+        const per = prison(20,30);
+        console.log(per)
+    </script>
+</body>
+
+</html>

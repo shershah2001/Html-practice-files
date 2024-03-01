@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      <p id="demo"></p>
+        
+        <script>
+         const arr = ["apple"]
+         console.log(arr.includes("apple"))
+          function Person (first,last,age,eye){
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            this.fullName = function(name){
+               return this.firstName = name;
+            }
+          }
+          const myFather = new Person("John","Doe",50,"blue");
+         // myFather.fullName("Mohd. Anwar shah")
+          const myMother = new Person("Sally","Rally",48,"green");
+          myFather.nationality = "english";
+          document.querySelector("#demo").innerHTML = `${myFather.fullName("Mohd. Anwar shah")}`
+        </script>
+    </body>
+</html>

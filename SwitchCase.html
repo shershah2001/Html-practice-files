@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to use Switch</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        const demoPara = document.querySelector("#demo");
+        switch (new Date().getDay()) {
+            case 0:
+            case 1:
+                 demoPara.innerHTML = "hello saturday 0 1";
+                 break;
+            case 2:
+            case 3:
+                 demoPara.innerHTML = "hello wednesday";
+                 break;
+            case 4:
+                 demoPara.innerHTML = "hello monday";
+                 break;
+            default:
+                 demoPara.innerHTML = "not day";
+                 break;
+        }
+    </script>
+</body>
+
+</html>

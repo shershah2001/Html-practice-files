@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const loadScript = (src, callBack) => {
+            let script = document.createElement('script');
+            script.src = src;
+            script.onload = () => callBack(null,script);
+            script.onerror = () => callBack(new Error("something went wrong with link"))
+            document.body.appendChild(script)
+        }
+        const hello = (error,script) => {
+         if(error){
+           return console.log(error)
+         }
+         console.log(script)
+        }
+
+        loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", hello)
+    </script>
+</body>
+
+</html>

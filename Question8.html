@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to use Set and how to convert array and object in set , vice-versa and </title>
+</head>
+
+<body style="background-color: #313131;">
+
+    <script>
+        const arrOfobject = { a: "apple", b: "banana", c: "potato", d: "tomato", e: "apple", f: "banana", g: "potato" }
+        const arrOfvalues = new Set(Object.entries(arrOfobject))
+        let text = " "
+        const arrOfset = ["apple", "banana", "potato", "tomato", "apple", "banana", "potato"];
+        const setOfarr = new Set(Object.values(arrOfobject));
+
+        // Convert set to array, map the elements, and then create a new set
+        const arrOfmapset = Array.from(setOfarr, (ele) => ele)
+        //console.log(arrOfmapset)
+        const arrOfat = Object.keys(arrOfobject).at(1)
+        console.log(arrOfat)
+    </script>
+</body>
+
+</html>

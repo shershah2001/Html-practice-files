@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random image</title>
+</head>
+
+<body>
+    <div id="imageDiv"></div>
+    <button id="butn" onclick="clickHandler()">click </button>
+
+    <script>
+        const arr = [
+            "https://m.media-amazon.com/images/M/MV5BZDk1ZmU0NGYtMzQ2Yi00N2NjLTkyNWEtZWE2NTU4NTJiZGUzXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_.jpg",
+
+            "https://filmfare.wwmindia.com/photogallery/2023/may/salmankhan11684830563.jpg",
+
+            "https://cdn.britannica.com/25/162425-050-B767198B/Aamir-Khan.jpg",
+
+            "https://cdn.britannica.com/12/215912-050-02257657/Indian-actor-Amitabh-Bachchan-2013.jpg",
+
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hrithik_at_Rado_launch.jpg/220px-Hrithik_at_Rado_launch.jpg",
+
+            "https://upload.wikimedia.org/wikipedia/commons/0/04/Jackie_Chan_Cannes_2012_%28cropped%29.jpg",
+
+            "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
+
+            "https://thumbs.dreamstime.com/b/world-map-technological-background-best-internet-concept-global-business-elements-image-furnished-bright-lines-66529240.jpg",
+
+            "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg",
+            "https://i.pinimg.com/736x/04/24/12/04241279f5a85323615d383e6a55f151.jpg",
+
+            "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg",
+
+        ];
+        const clickHandler = () => {
+            const imageDiv = document.querySelector("#imageDiv");
+
+            imageDiv.innerHTML = arr.toSorted(() => Math.floor(Math.random()- 0.5)).slice(0, 5).map((ele) => {
+                return (
+                    ` <img style="width:250px; height:250px;" src=${ele} alt="image">`
+                )
+            }).join(' ')
+           
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
