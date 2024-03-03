@@ -145,20 +145,24 @@
 // let user_1 = new user();
 // console.log(user_1.sayBye())
 
+//HOW YOU CAN USE MIXIN IN CHILD PROTOTYPE;
 
-const usefullMethod ={
-    sayHi(){
-        console.log('Hi...');
-    },
-    sayBye(){
-        console.log('bye...')
-    }
-}
-class user{
-    constructor(){
-        this.name = 'vishwajeet'
-    }
-}
-Object.assign(user.prototype,usefullMethod);
-let usr1 = new user();
-console.log(usr1)
+// const usefullMethod ={
+//     sayHi(){
+//         console.log('Hi...');
+//     },
+//     sayBye(){
+//         console.log('bye...')
+//     }
+// }
+// class user{
+//     constructor(){
+//         this.name = 'vishwajeet'
+//     }
+// }
+// class admin extends user{
+
+// }
+// Object.assign(admin.prototype,usefullMethod);
+// const  newAdmin = new admin();
+// console.log(newAdmin.sayBye())
