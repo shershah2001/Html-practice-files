@@ -108,3 +108,57 @@
 // const b = new hello('hello mohit', 2019, 20000)
 // const a = new dataAno("hello shershah", 2018, 15000);
 // console.log("a=>", a, "b=>", b) 
+
+//  WHAT IS PRIVATE AND WHAT IS PUBLIC
+
+// class emp {
+//     #name = '';
+//     constructor(n) {
+//         this.#name = n;
+//     }
+//     #getName(){
+//         console.log(this.#name);
+//     }
+//     pubfuc(){
+//         this.#getName();
+//     }
+// }
+// const emp1 = new emp('hi shershah');
+// console.log(emp1.pubfuc())
+
+// WHAT IS MIXIN AND HOW TO USE MIXIN;
+
+// let usefullmethod = {
+//     sayHi(){
+//       console.log('Hi...')
+//     },
+//     sayBye(){
+//         console.log('Bye...')
+//     }
+// };
+// class user{
+//     constructor(){
+//         this.name ='vishwajeet'
+//     }
+// }
+// Object.assign(user.prototype,usefullmethod);
+// let user_1 = new user();
+// console.log(user_1.sayBye())
+
+
+const usefullMethod ={
+    sayHi(){
+        console.log('Hi...');
+    },
+    sayBye(){
+        console.log('bye...')
+    }
+}
+class user{
+    constructor(){
+        this.name = 'vishwajeet'
+    }
+}
+Object.assign(user.prototype,usefullMethod);
+let usr1 = new user();
+console.log(usr1)
