@@ -166,3 +166,17 @@
 // Object.assign(admin.prototype,usefullMethod);
 // const  newAdmin = new admin();
 // console.log(newAdmin.sayBye())
+
+// HOW TO USE  STATIC METHOD  IN CLASS  METHOD  
+class Car {
+    constructor(name) {
+        this.modelName = name;
+    }
+    
+    static hello(name) {
+        return `${name}` ;
+    }
+}
+
+const newCar = new Car('ford');
+document.write(Car.hello(newCar)); 

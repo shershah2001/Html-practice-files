@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,*::after,*::before{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .main_menu{
+            display: flex;
+            background:#ce5555;
+            width:100%;
+            height:3.5rem;
+        }
+        .main_menu .sub_menu{
+            list-style: none;
+            padding-left:1rem;
+            position:relative;
+            color:#fff;
+            cursor: pointer;
+            line-height: 3.5rem;
+        }
+        .sub_menu .sub_main_menu{
+            position:absolute;
+            background:red;
+            width:150px;
+            padding-left:0.5rem;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .sub_menu .sub_main_menu .sub_sub_menu{
+            list-style: none;
+            line-height:3;
+        }
+        .sub_menu:hover .sub_main_menu {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="main_menu">
+        <li class="sub_menu">Home</li>
+        <li class="sub_menu">Contact</li>
+        <li class="sub_menu">
+            Service
+            <ul class="sub_main_menu">
+                <li class="sub_sub_menu">Laptop</li>
+                <li class="sub_sub_menu">Computer</li>
+                <li class="sub_sub_menu">Mouse</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
