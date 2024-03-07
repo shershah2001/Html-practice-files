@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The Element Object</h1>
+    <h2>The children.length Property</h2>
+
+    <p>How many elements does "myDIV" have?</p>
+    <p id="demo"></p>
+
+    <div id="myDIV">
+        <p>I am a paragraph</p>
+        <p>I am a paragraph</p>
+        <p>I am a paragraph</p>
+    </div>
+    <button onclick="colorHandler()">click</button>
+    <script>
+        const bodyele = document.body.children;
+        const colorHandler = () => {
+            for (let i = 0; i < bodyele.length; i++) {
+                bodyele[i].style.color = 'red'
+            }
+        }
+
+    </script>
+</body>
+
+</html>

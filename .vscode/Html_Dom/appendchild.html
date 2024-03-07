@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="list">
+        <li>computer</li>
+        <li>laptop</li>
+    </ul>
+    <button onclick="addHandler()">click</button>
+    <script>
+        const list = document.querySelector('.list');
+        const addHandler = () => {
+            const create_element = document.createElement('li'); // createElement use to make html element by javascript. 
+            const create_text = document.createTextNode('mouse'); // createTextNode use to make strings or text which is i am inserting into the create_element as a string.
+            create_element.appendChild(create_text);//appendChild method is use to insert data from one element to another.
+            list.appendChild(create_element)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .value{
+            background-color: red;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The DOMToken Object</h1>
+    <h2>The add() Method</h2>
+
+    <button onclick="myFunction()">Add</button>
+    <p>Click "Add" to add the "myStyle" class to myDIV.</p>
+
+    <div id="myDIV">
+        <p class="para">I am a myDIV.</p>
+    </div>
+ <script>
+    const myFunction = () =>{
+        const list = document.querySelector('.para').classList;
+        list.toggle('value')
+        console.log(list.contains('value'))
+    }
+ </script>
+</body>
+
+</html>

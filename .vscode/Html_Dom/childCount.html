@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The Element Object</h1>
+    <h2>The childElementCount Property</h2>
+
+    <div id="myDIV">
+        <p>First p element</p>
+        <p>Second p element</p>
+    </div>
+
+    <p>Number of children in the div element is:</p>
+    <p id="demo"></p>
+    <script>
+        const body_element = document.querySelector('body');
+        console.log(body_element.childElementCount)//childElementCount is used to count the how many child element present in the div or body and any parent;
+        console.log(body_element.children.length)// children.length is the alternative method to count the child element like childElementCount;
+    </script>
+</body>
+
+</html>

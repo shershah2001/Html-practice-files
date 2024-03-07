@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDIV {
+            height: 250px;
+            width: 400px;
+            padding: 10px;
+            margin: 15px;
+            border-top: 15px solid black;
+            border-left: 10px solid red;
+            border-right: 10px solid blue;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The Element Object</h1>
+    <h2>The clientTop and clientLeft Properties</h2>
+
+    <p>Display the width of myDIV's top and left border:</p>
+
+    <div id="myDIV">
+        <p id="demo"></p>
+    </div>
+    <script>
+        const myDiv = document.querySelector('#myDIV')
+        console.log(myDiv.clientLeft, myDiv.clientTop)// clientLeft and ClientTop this two property gives you width of the element border which you apply on it.
+    </script>
+</body>
+
+</html>

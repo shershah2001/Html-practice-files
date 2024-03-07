@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The Element Object</h1>
+    <h2>The childNodes Property</h2>
+
+    <div id="myDIV">
+        <p>First p element (index 1)</p>
+        <p>Second p element (index 3)</p>
+    </div>
+
+    <p>The number of child nodes in "myDIV" are:</p>
+    <p id="demo"></p>
+
+    <p>Whitespace between elements are text nodes. In this example, index 0, 2 and 4 in "myDIV" are text nodes.</p>
+    <button onclick="colorHandler()">click</button>
+    <script>
+        const body = document.body;
+        console.log(body.childNodes[4])// childNodes  this gives you a nodelist of child element of div or body and you can also access that list like array, ex = > arr[0] you also extract element from Nodelist like this Nodelist[0] but it doesn't means that it is a array. you can't use array method on Nodelist like map, filter , find , reduce method. to use this method you have to convert this Nodelist first into array.
+        const bodyNodes = body.childNodes;
+        const colorHandler = () => {
+            for (let i = 0; i < bodyNodes.length; i++) {
+                bodyNodes[i].style.color = 'blue'
+            }
+        } // you can't use for on the childNodes list
+
+    </script>
+</body>
+
+</html>
