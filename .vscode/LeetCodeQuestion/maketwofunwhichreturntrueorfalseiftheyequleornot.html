@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello world</h1>
+    <script>
+        const expect = function (val) {
+            const toBe = (value) => {
+                if (val === value) {
+                    return true;
+                } else {
+                    throw new Error("Not Equal")
+                }
+            }
+            const notToBe = (notvalue)=>{
+                    if(val !== notvalue){
+                        return true
+                    }else{
+                        throw new Error("Equal")
+                    }
+            }
+            return{
+                toBe,
+                notToBe
+            }
+        };
+        const unexpect = expect(5);
+        unexpect.toBe(5)
+        unexpect.notToBe(6)
+
+    </script>
+</body>
+
+</html>
