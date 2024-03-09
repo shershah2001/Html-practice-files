@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    </body>
+
+</head>
+
+<body>
+    <div class="d-flex justify-content-center w-100">
+        <div class="d-flex  flex-column firstDiv ">
+            <div class="one_div d-flex flex-column">
+                <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg"
+                    alt="image1">
+                <button class="my-4" onclick="closurefunction('one_div')">image one</button>
+            </div>
+            <div class="two_div d-flex flex-column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYscfUBUbqwGd_DHVhG-ZjCOD7MUpxp4uhNe7toUg4ug&s"
+                    alt="image2">
+                <button class="my-4" onclick="closurefunction('two_div')">image two </button>
+            </div>
+            <div class="three_div d-flex flex-column">
+                <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
+                    alt="image3">
+                <button class="my-4" onclick="closurefunction('three_div')">image three</button>
+            </div>
+            <div class="four_div d-flex flex-column">
+                <img src="https://img.freepik.com/premium-photo/colorful-painted-portrait-elephant-s-face-with-vivid-hues-showcasing-majestic-beauty-charm-this-magnificent-animal_674594-4024.jpg"
+                    alt="image4">
+                <button class="my-4" onclick="closurefunction('four_div')">image four</button>
+            </div>
+
+            <div class="five_div d-flex flex-column">
+                <img src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg"
+                    alt="image5">
+                <button class="my-4" onclick="closurefunction('five_div')">image five</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        const closurefunction = (arg) => {
+            const firstDiv = document.querySelector('.firstDiv')
+            const div = document.querySelector(`.${arg}`)
+            firstDiv.insertBefore(div, firstDiv.firstElementChild)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myList li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>computer</li>
+        <li>laptop</li>
+        <li>mouse</li>
+    </ul>
+
+    <ul id="myList1">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    <ul id="myList2">
+        <li>Water</li>
+        <li>Milk</li>
+        <li>Juice</li>
+        <li>computer</li>
+        <li>laptop</li>
+        <li>mouse</li>
+    </ul>
+    <button onclick="clickHandler()">click here</button>
+    <script>
+        const List = document.querySelector('#myList');
+        const createEle = document.createElement('li');
+        const createText = document.createTextNode('Hello world');
+        const appendEle = createEle.appendChild(createText);
+        List.insertBefore(appendEle, List.firstElementChild);//The insertBefore() method inserts a child node before an existing child.
+
+        const List1 = document.querySelector('#myList1');
+        const List2 = document.querySelector('#myList2');
+        const clickHandler = () =>{
+            List2.insertBefore(List2.lastElementChild,List2.firstElementChild)
+        }
+    </script>
+</body>
+
+</html>
