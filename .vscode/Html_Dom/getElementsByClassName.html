@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        The getElementsByClassName() method returns a collection of child elements with a given class name. The getElementsByClassName() method returns a NodeList object.
+    </h1>
+    <h1>The Element Object</h1>
+    <h2>The getElementsByClassName() Method</h2>
+
+    <ul class="example">
+        <li class="child">Coffee</li>
+        <li class="child">Tea</li>
+    </ul>
+
+    <p>Click "Change" to change the text of the first list item:</p>
+    <button onclick="myFunction()">Change</button>
+    <script>
+        const myFunction = () => {
+            const example = document.getElementsByClassName('example')[0]
+            // The getElementsByClassName() method returns a collection of child elements with a given class name. The getElementsByClassName() method returns a NodeList object.
+            const child = document.getElementsByClassName('child')[0];
+            child.innerHTML = 'hello world'
+        }
+    </script>
+</body>
+
+</html>

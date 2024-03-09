@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
+
+        The getBoundingClientRect() method returns a DOMRect object with eight properties: left, top, right, bottom, x,
+        y, width, height.</h1>
+    <div onscroll="myFunction()" style="height:200px; width:300px; overflow:auto;">
+        <div id="myDiv" style="width:250px; height:150px; padding:16px; border:1px solid black;">
+            Scroll to display the bounding client rect of the element with the border.
+        </div>
+        <div style="width:1000px; height:1000px;"></div>
+    </div>
+    <p id="demo"></p>
+    <script>
+        const myFunction = () => {
+            const myDiv = document.querySelector('#myDiv');
+            const scroll = myDiv.getBoundingClientRect() //The getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
+
+            // The getBoundingClientRect() method returns a DOMRect object with eight properties: left, top, right, bottom, x, y, width, height.
+            console.log(scroll)
+            console.log(`${scroll.left} ${scroll.right} "bottom=>",${scroll.bottom} ${scroll.width} ${scroll.top} ${scroll.x} ${scroll.y}`)
+        }
+    </script>
+</body>
+
+</html>

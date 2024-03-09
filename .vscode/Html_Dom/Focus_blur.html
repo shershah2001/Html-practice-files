@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:focus {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <button onblur="blurHandler()">blur</button>
+    <button onfocus="focushandler()">focus</button>
+    <p id="demo" tabindex="0">hello world</p>
+    <!-- you have to use tabindex to focus on the html tag paragraf -->
+    <script>
+        const input = document.querySelector('input[type=text]');
+        const para = document.querySelector('#demo');
+        const focushandler = () => {
+            //input.focus() // focus() this is used for giving focus on the html element.
+            para.focus();
+        }
+        const blurHandler = () => {
+            input.blur();// blur() this is used for giving blur on the html element.
+        }
+    </script>
+</body>
+
+</html>

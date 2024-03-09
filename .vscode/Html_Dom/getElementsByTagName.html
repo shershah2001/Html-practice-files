@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The getElementsByTagName() method returns a collection of child elements with a given tag name.
+
+        The getElementsByTagName() method returns an HTMLCollection.</h1>
+    <h1>The Element Object</h1>
+    <h2>The getElementsByTagName() Method</h2>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+
+    <p>Click "Change" to change the text of the first list item.</p>
+    <button onclick="myFunction()">Change</button>
+    <script>
+        const myFunction = () =>{
+         const ul = document.getElementsByTagName('UL')[0];//The getElementsByTagName() method returns a collection of child elements with a given tag name.
+         //The getElementsByTagName() method returns an HTMLCollection.
+         const  sel = document.getElementsByTagName('li')[0]
+         console.log(sel.innerHTML = "hello world")
+        }
+    </script>
+</body>
+
+</html>

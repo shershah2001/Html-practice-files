@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The hasAttribute() method returns true if the attribute exists, otherwise false.</h1>
+    <h1>The Element Object</h1>
+    <h2>The hasAttribute() Method</h2>
+
+    <button id="myBtn" onclick="myFunction()">BUTTON</button>
+
+    <p>Does the button have an onclick attribute:</p>
+    <p id="demo"></p>
+    <a id="myA" href="https://www.w3schools.com" target="_blank">W3schools</a>.
+    <script>
+        const btn = document.querySelector('#myBtn');
+        const has = btn.hasAttribute('onclick');//The hasAttribute() method returns true if the attribute exists, otherwise false.
+        console.log(has)
+        // setAttribute 
+        function myFunction() {
+            const element = document.getElementById("myA");
+            if (element.hasAttribute("target")) {
+                element.setAttribute("target", "_self");// self attribute is used to change the value of attribute;
+            }
+        }
+
+        // another method of hasAttribute is hasAttributes 
+        //The hasAttributes() method returns true if a node has attributes, otherwise false.
+        //The hasAttributes() method always returns false if the node is not an element node. 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The Element Object</h1>
+    <h2>The firstElementChild Property</h2>
+
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    <ul id="myListData">
+        <li>coffee</li>
+        <li>Tea</li>
+    </ul>
+    <p>The HTML content of the list's first child is:</p>
+    <p id="demo"></p>
+    <script>
+        //const firstChild = document.querySelector('#myList').firstChild.innerHTML;
+        //document.querySelector('#demo').innerHTML = firstChild;// NOTE firstChild returns the first child node: An element node, a text node, or a comment node.
+        //Whitespace between elements are also text nodes.
+        const firstChildElement = document.querySelector('#myListData').firstElementChild.innerHTML;
+        document.querySelector('#demo').innerHTML = firstChildElement;
+        //The firstElementChild property returns the first child element of the specified element.
+        //The firstElementChild property is read-only.
+        //The firstElementChild property returns the same as children[0].
+    </script>
+</body>
+
+</html>

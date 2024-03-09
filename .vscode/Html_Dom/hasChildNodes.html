@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The Element Object</h1>
+    <h2>The hasChildNodes() Method</h2>
+
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+
+    <p>Click the button to remove the child nodes from the list, one by one:</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <p><strong>Note:</strong> Whitespace between nodes is considered text nodes.
+        Some of the child nodes you remove are invisible white space or line feeds.</p>
+    <script>
+     const myList = document.querySelector('#myList');
+     const hasNodes = myList.hasChildNodes()//The hasChildNodes() method returns true if the specified node has any child nodes, otherwise false.The hasChildNodes() method is read-only.
+     const myFunction = () =>{
+        if(hasNodes){
+            const child = myList.childNodes;
+            myList.removeChild(child[0])
+        }
+     }
+    </script>
+</body>
+
+</html>
