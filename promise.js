@@ -66,6 +66,8 @@ const porb = async () => {
     try {
         const API_KEY = "84ebc29e19fdea8a57a599a5928e7e0d";
         const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=4`);
+       
+
         if (!response.ok) {
             throw new Error(`HTTP error! status ${response.status}`);
         }

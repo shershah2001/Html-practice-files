@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Image Resizing</title>
+<style>
+    #canvas {
+        border: 1px solid black;
+    }
+    .resize-handle {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        position: absolute;
+        cursor: nwse-resize;
+    }
+</style>
+</head>
+<body>
+<input type="file" id="fileInput" accept="image/*">
+<br>
+<canvas id="canvas"></canvas>
+<div id="resizeHandle" class="resize-handle"></div>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const resizeHandle = document.getElementById('resizeHandle');
+let img = new Image();
+let isResizing = false;
+let startX, startY, startWidth, startHeight;
+
+// Function to draw the image and resize handle
+function drawImage() {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage(img, 0, 0, img.width, img.height);
+    resizeHandle.style.left = `${canvas.width - 10}px`;
+    resizeHandle.style.top = `${canvas.height - 10}px`;
+}
+
+// Function to handle file input change
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        img.onload = drawImage;
+        img.src = e.target.result;
+    };
+
+    reader.readAsDataURL(file);
+});
+
+// Mouse down event on the resize handle
+resizeHandle.addEventListener('mousedown', function(e) {
+    isResizing = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    startWidth = canvas.width;
+    startHeight = canvas.height;
+    e.preventDefault();
+});
+
+// Mouse move event on the window
+window.addEventListener('mousemove', function(e) {
+    if (isResizing) {
+        const currentX = e.clientX;
+        const currentY = e.clientY;
+        const diffX = currentX - startX;
+        const diffY = currentY - startY;
+        
+        img.width = startWidth + diffX;
+        img.height = startHeight + diffY;
+        drawImage();
+    }
+});
+
+// Mouse up event on the window
+window.addEventListener('mouseup', function(e) {
+    if (isResizing) {
+        isResizing = false;
+    }
+});
+</script>
+<script src="./js/howtoconvertfirstletterintouppercase.js"></script>
+</body>
+</html>
